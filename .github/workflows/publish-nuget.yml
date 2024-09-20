@@ -31,4 +31,4 @@ jobs:
       run: |
         for %%f in (*.nupkg) do ( 
         dotnet nuget push %%f -k ${{ secrets.NUGET_API_KEY }}  -s https://api.nuget.org/v3/index.json   
-        if %ERRORLEVEL% neq 0 ( echo Error pushing %%f  goto :eof  )  
+        if %ERRORLEVEL% neq 0 ( echo Error pushing %%f  goto :eof  ) )
