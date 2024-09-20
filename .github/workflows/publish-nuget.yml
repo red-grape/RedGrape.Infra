@@ -29,12 +29,4 @@ jobs:
         
     - name: Publish to NuGet  
       run: |
-        Get-ChildItem -Filter *.nupkg | ForEach-Object {  
-        $packageFile = $_.FullName  
-        # Push the NuGet package to the feed  
-        dotnet nuget push $packageFile -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json  
-        # Check for errors  
-        if ($LASTEXITCODE -ne 0) {  
-          Write-Host "Error pushing $packageFile"  
-          exit 1  # Exit with an error code }
-        } 
+        dotnet nuget push *.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
