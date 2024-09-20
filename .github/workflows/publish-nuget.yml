@@ -35,4 +35,8 @@ jobs:
           ./RedGrape.Infra.Core/RedGrape.Infra.Core.csproj  
         NUGET_KEY: ${{ secrets.NUGET_API_KEY }}  
         PACKAGE_NAME: RedGrape.Infra.Transmit, RedGrape.Infra.Core  
-        INCLUDE_SYMBOLS: false  
+        INCLUDE_SYMBOLS: false 
+        VERSION_REGEX: ^\s*<Version>(.*)<\/Version>\s*$  
+        TAG_COMMIT: true  
+        TAG_FORMAT: v*  
+        NUGET_SOURCE: https://api.nuget.org         
