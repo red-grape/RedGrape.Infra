@@ -9,7 +9,7 @@ set nuget_feed_url=https://api.nuget.org/v3/index.json
 rem Loop through all .nupkg files in the current directory  
 for %%f in (*.nupkg) do (  
     rem Push the NuGet package to the feed  
-    dotnet nuget push %%f -k %NUGET_API_KEY% -s %nuget_feed_url%  
+    dotnet nuget push %%f -k %NUGET_API_KEY% -s %nuget_feed_url% --skip-duplicate 
     if %ERRORLEVEL% neq 0 (  
         echo Error pushing %%f  
         goto :eof  
