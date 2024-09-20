@@ -8,7 +8,7 @@
 	<!--start create nuget -->
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageId>RedGrape.Infra.Transmit</PackageId>
-	<Version>0.0.3</Version>
+	<Version>0.0.4</Version>
 	<Authors>Red Grape</Authors>
 	<Description></Description>
 	<PackageTags>C#; .Net Core;</PackageTags>
