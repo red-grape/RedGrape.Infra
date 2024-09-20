@@ -1,0 +1,38 @@
+name: Publish to NuGet  
+
+on:  
+  push:  
+    branches: [ "main" ]  
+  pull_request:  
+    branches: [ "main" ]  
+
+jobs:  
+
+  build:  
+    runs-on: windows-latest  
+    
+    steps:  
+    - uses: actions/checkout@v2  
+    
+    - name: Setup .NET Core  
+      uses: actions/setup-dotnet@v1  
+      with:  
+        dotnet-version: 8.0.x  
+        
+    - name: Build  
+      run: dotnet build --configuration Release  
+        
+    - name: Pack  
+      run: |  
+        dotnet pack src/RedGrape.Infra.Transmit/RedGrape.Infra.Transmit.csproj -c Release -o .  
+        dotnet pack src/RedGrape.Infra.Core/RedGrape.Infra.Core.csproj -c Release -o .  
+        
+    - name: Publish to NuGet  
+      uses: brandedoutcast/publish-nuget@v2.5.5  
+      with:  
+        PROJECT_FILE_PATH: |  
+          src/RedGrape.Infra.Transmit/RedGrape.Infra.Transmit.csproj  
+          src/RedGrape.Infra.Core/RedGrape.Infra.Core.csproj  
+        NUGET_KEY: ${{ secrets.NUGET_API_KEY }}  
+        PACKAGE_NAME: RedGrape.Infra.Transmit, RedGrape.Infra.Core  
+        INCLUDE_SYMBOLS: false  
