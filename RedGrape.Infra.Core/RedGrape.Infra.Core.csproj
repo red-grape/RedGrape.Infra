@@ -4,6 +4,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	<!--start create nuget -->
+	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageId>RedGrape.Infra.Core</PackageId>
+	<Version>0.0.1</Version>
+	<Authors>Red Grape</Authors>
+	<Description></Description>
+	<PackageTags>C#; .Net Core;</PackageTags>
+	<!--end create nuget -->
+	  
   </PropertyGroup>
 
 </Project>
