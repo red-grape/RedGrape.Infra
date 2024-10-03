@@ -2,6 +2,7 @@
 rem pack all project 
 dotnet pack ./RedGrape.Infra.Transmit/RedGrape.Infra.Transmit.csproj -c Release -o .  
 dotnet pack ./RedGrape.Infra.Core/RedGrape.Infra.Core.csproj -c Release -o .
+dotnet pack ./RedGrape.Infra.Extentions/RedGrape.Infra.Extentions.csproj -c Release -o .
 
 rem Set the NuGet feed URL  
 set nuget_feed_url=https://api.nuget.org/v3/index.json  

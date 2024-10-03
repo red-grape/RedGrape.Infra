@@ -17,18 +17,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
-    <PackageReference Include="xunit.v3" Version="0.3.0-pre.18" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="3.0.0-pre.30" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\RedGrape.Infra.Core\RedGrape.Infra.Core.csproj" />
+    <ProjectReference Include="..\RedGrape.Infra.Extentions\RedGrape.Infra.Extentions.csproj" />
     <ProjectReference Include="..\RedGrape.Infra.Transmit\RedGrape.Infra.Transmit.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Shared\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="wrong_appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
