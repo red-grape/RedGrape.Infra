@@ -8,7 +8,7 @@
 	<!--start create nuget -->
 	<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	<PackageId>RedGrape.Infra.Transmit</PackageId>
-	<Version>0.0.4</Version>
+	<Version>1.0.0-alpha.1</Version>
 	<Authors>Red Grape</Authors>
 	<Description></Description>
 	<PackageTags>C#; .Net Core;</PackageTags>
@@ -17,6 +17,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 

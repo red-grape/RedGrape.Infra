@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{7F5430D3-D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{7717B672-4FA3-445B-93CA-058F676E333D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedGrape.Infra.Extentions", "RedGrape.Infra.Extentions\RedGrape.Infra.Extentions.csproj", "{A93E0680-7FA9-492F-A774-D85183B08AC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{7717B672-4FA3-445B-93CA-058F676E333D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7717B672-4FA3-445B-93CA-058F676E333D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7717B672-4FA3-445B-93CA-058F676E333D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A93E0680-7FA9-492F-A774-D85183B08AC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A93E0680-7FA9-492F-A774-D85183B08AC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A93E0680-7FA9-492F-A774-D85183B08AC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A93E0680-7FA9-492F-A774-D85183B08AC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
