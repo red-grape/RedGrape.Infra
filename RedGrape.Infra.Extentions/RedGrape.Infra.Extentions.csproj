@@ -8,7 +8,7 @@
 	  <!--start create nuget -->
 	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 	  <PackageId>RedGrape.Infra.Extentions</PackageId>
-	  <Version>0.1.0-alpha.1</Version>
+	  <Version>0.1.0-alpha.2</Version>
 	  <Authors>Red Grape</Authors>
 	  <Description></Description>
 	  <PackageTags>C#; .Net Core;</PackageTags>
